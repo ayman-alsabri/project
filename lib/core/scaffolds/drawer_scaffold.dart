@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:project/core/appBar/main_app_bar.dart';
+import 'package:project/core/buttons/app_bar_btn.dart';
 import 'package:project/core/drawer/my_drawer.dart';
 import 'package:project/core/scaffolds/gradiant_scaffold.dart';
 import 'package:project/core/services/setting_service.dart';
@@ -12,8 +13,10 @@ part 'controllers/drawer_scaffold_controller.dart';
 class DrawerScaffold extends StatelessWidget {
   final String title;
   final Widget body;
+  final Future<void> Function() onTap;
   const DrawerScaffold({
     required this.body,
+    required this.onTap,
     super.key,
     required this.title,
   });
@@ -71,6 +74,7 @@ class DrawerScaffold extends StatelessWidget {
                             ]
                           : []),
                   child: GradientScaffold(
+                    floatingActionButton:AppBarButton(onTap: onTap, icon: Icons.add) ,
                     appBar: MainAppBar(
                       isDrawerShown: drawerIsShown,
                       title: title,

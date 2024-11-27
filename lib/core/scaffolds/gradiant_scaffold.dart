@@ -19,7 +19,7 @@ class GradientScaffold extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: Theme.of(context).brightness==Brightness.dark
+          colors: Theme.of(context).brightness == Brightness.dark
               ? [const Color(0xff31363C), const Color(0xff191A1E)]
               : [const Color(0xffE2EAFD), const Color(0xffEBF2FC)],
           begin: const Alignment(1, -1),
@@ -27,6 +27,7 @@ class GradientScaffold extends StatelessWidget {
         ),
       ),
       child: Scaffold(
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         backgroundColor: Colors.transparent,
         appBar: appBar,
         body: body,
