@@ -46,3 +46,40 @@ class Tasks{
     return json;
   }
 }
+List<Tasks> getDummyTasks() {
+  return [
+    Tasks(
+      id: 1,
+      name: "Task 1",
+      decription: "Description for Task 1",
+      taskDate: "2023-10-01",
+      categoryID: 1,
+      priority: "High",
+      status: "Pending",
+      isActive: 1,
+      impDate: "2023-10-01",
+    ),
+    Tasks(
+      id: 2,
+      name: "Task 2",
+      decription: "Description for Task 2",
+      taskDate: "2023-10-02",
+      categoryID: 2,
+      priority: "Medium",
+      status: "Completed",
+      isActive: 1,
+      impDate: "2023-10-02",
+    ),
+    Tasks(
+      id: 3,
+      name: "Task 3",
+      decription: "Description for Task 3",
+      taskDate: "2023-10-03",
+      categoryID: 3,
+      priority: "Low",
+      status: "In Progress",
+      isActive: 1,
+      impDate: "2023-10-03",
+    ),
+  ];
+}

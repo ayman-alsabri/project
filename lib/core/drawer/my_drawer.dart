@@ -28,7 +28,13 @@ class MyDrawer extends StatelessWidget {
               const SizedBox(height: 32),
               Column(
                 children: [
-               Text('data')
+                 Text(
+                 'Amjad, Ayman, and Emad we are impetiont Flutter developers studying CS and IT.',
+                 style: TextStyle(
+                   fontSize: 18,
+                   color: apptheme.colorScheme.onTertiary,
+                 ),
+                 ),
                 ],
               )
             ],
