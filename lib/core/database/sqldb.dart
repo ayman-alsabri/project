@@ -43,6 +43,16 @@ class SqlDb {
   FOREIGN KEY("CategoryID") REFERENCES "Category"("ID")
 );
 ''');
+
+    await db.execute('''
+  CREATE TABLE "Category" (
+  "ID"  INTEGER,
+  "Name"  TEXT,
+  "Description"  TEXT,
+  PRIMARY KEY("ID" AUTOINCREMENT)
+);
+''');
+
   }
 
   Future<List<Map>> selectData(
